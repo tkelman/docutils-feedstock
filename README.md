@@ -11,6 +11,18 @@ Summary: Docutils -- Python Documentation Utilities
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/docutils-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/docutils-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/docutils-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/docutils-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/docutils-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/docutils-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/docutils/badges/version.svg)](https://anaconda.org/conda-forge/docutils)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/docutils/badges/downloads.svg)](https://anaconda.org/conda-forge/docutils)
+
 Installing docutils
 ===================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `docutils` available on your platf
 ```
 conda search docutils --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/docutils-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/docutils-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/docutils-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/docutils-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/docutils-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/docutils-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/docutils/badges/version.svg)](https://anaconda.org/conda-forge/docutils)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/docutils/badges/downloads.svg)](https://anaconda.org/conda-forge/docutils)
 
 
 Updating docutils-feedstock
