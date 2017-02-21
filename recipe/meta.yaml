@@ -1,19 +1,21 @@
 {%set name = "docutils" %}
-{%set version = "0.12" %}
+{%set version = "0.13.1" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "c7db717810ab6965f66c8cf0398a98c9d8df982da39b4cd7f162911eb89596fa" %}
+{%set hash_val = "718c0f5fb677be0f34b781e04241c4067cbd9327b66bdd8e763201130f5175be" %}
+{%set build_num = "0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: {{ build_num }}
   script: python setup.py install
 
 requirements:
@@ -47,6 +49,7 @@ about:
   home: http://docutils.sourceforge.net/
   license: Public Domain Dedictation and BSD 2-Clause and PSF 2.1.1 and GPL 3.0
   summary: 'Docutils -- Python Documentation Utilities'
+  dev_url: http://docutils.sourceforge.net/
 
 extra:
   recipe-maintainers:
