@@ -17,8 +17,9 @@ document, or XML.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/docutils-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/docutils-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/docutils-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/docutils-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/docutils-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/docutils-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/docutils-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/docutils-feedstock/branch/master)
 
 Current release info
 ====================
