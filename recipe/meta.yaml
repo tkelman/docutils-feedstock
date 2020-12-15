@@ -1,4 +1,4 @@
-{% set version = "0.16" %}
+{% set version = "0.15.2" %}
 
 package:
   name: docutils
@@ -6,10 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/docutils/docutils-{{ version }}.tar.gz
-  sha256: c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc
+  sha256: a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99
 
 build:
-  number: 2
+  # Build 0 at 76bce13
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
