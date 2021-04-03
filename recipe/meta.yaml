@@ -1,4 +1,4 @@
-{% set version = "0.16" %}
+{% set version = "0.17" %}
 
 package:
   name: docutils
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/docutils/docutils-{{ version }}.tar.gz
-  sha256: c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc
+  sha256: e2ffeea817964356ba4470efba7c2f42b6b0de0b04e66378507e3e2504bbff4c
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -47,7 +47,7 @@ about:
   home: http://docutils.sourceforge.net/
   license: Public Domain Dedictation and BSD 2-Clause and PSF 2.1.1 and GPL 3.0
   license_file: COPYING.txt
-  summary: 'Docutils -- Python Documentation Utilities'
+  summary: Docutils -- Python Documentation Utilities
   description: |
     Docutils is an open-source text processing system for processing plaintext
     documentation into useful formats, such as HTML, LaTeX, man-pages, open-
