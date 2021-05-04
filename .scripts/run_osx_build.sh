@@ -19,8 +19,6 @@ bash $MINIFORGE_FILE -b -p ${MINIFORGE_HOME}
 
 BUILD_CMD=build
 
-BUILD_CMD=build
-
 source ${MINIFORGE_HOME}/etc/profile.d/conda.sh
 conda activate base
 
