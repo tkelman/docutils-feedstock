@@ -1,16 +1,20 @@
-{% set version = "0.18" %}
+{% set name = "docutils" %}
+{% set version = "0.18.1" %}
+
 
 package:
-  name: docutils
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/docutils/docutils-{{ version }}.tar.gz
-  sha256: c1d5dab2b11d16397406a282e53953fe495a46d69ae329f55aa98a5c4e3c5fbb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/docutils-{{ version }}.tar.gz
+  sha256: 679987caf361a7539d76e584cbeddc311e3aee937877c87346f31debc63e9d06
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  skip: true   # [py<36]
+  # cannot be noarch b/c of scripts
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -42,10 +46,14 @@ test:
     - docutils.writers.pep_html
     - docutils.writers.s5_html
     - docutils.writers.xetex
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://docutils.sourceforge.net/
-  license: Public Domain Dedictation and BSD 2-Clause and PSF 2.1.1 and GPL 3.0
+  license: LicenseRef-Public-Domain-Dedictation and BSD-2-Clause and LicenseRef-PSF-2.1.1 and GPL-3.0-or-later
   license_file: COPYING.txt
   summary: Docutils -- Python Documentation Utilities
   description: |
