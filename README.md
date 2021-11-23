@@ -3,7 +3,7 @@ About docutils
 
 Home: http://docutils.sourceforge.net/
 
-Package license: Public Domain Dedictation and BSD 2-Clause and PSF 2.1.1 and GPL 3.0
+Package license: LicenseRef-Public-Domain-Dedictation and BSD-2-Clause and LicenseRef-PSF-2.1.1 and GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/docutils-feedstock/blob/master/LICENSE.txt)
 
