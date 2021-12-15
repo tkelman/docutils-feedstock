@@ -335,5 +335,4 @@ Feedstock Maintainers
 
 * [@nehaljwani](https://github.com/nehaljwani/)
 * [@ocefpaf](https://github.com/ocefpaf/)
-* [@pmlandwehr](https://github.com/pmlandwehr/)
 
