@@ -15,7 +15,7 @@ source:
 build:
   number: 4
   script:
-    - "{{ PYTHON }} -m pip uninstall setuptools"
+    - "{{ PYTHON }} -m pip uninstall -y setuptools"
     - "cd setuptools-src"
     - "{{ PYTHON }} -m pip install ."
     - "cd .."
