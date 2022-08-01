@@ -5,12 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/docutils/docutils-{{ version }}.tar.gz
-  sha256: a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99
+  - url: https://pypi.io/packages/source/d/docutils/docutils-{{ version }}.tar.gz
+    sha256: a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99
+  - url: https://pypi.io/packages/source/s/setuptools/setuptools-57.4.0.tar.gz
+    sha256: 6bac238ffdf24e8806c61440e755192470352850f3419a52f26ffe0a1a64f465
+    folder: setuptools-src
+
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 4
+  script:
+    - "{{ PYTHON }} -m pip uninstall -y setuptools"
+    - "cd setuptools-src"
+    - "{{ PYTHON }} -m pip install ."
+    - "cd .."
+    - "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -45,7 +54,7 @@ test:
 
 about:
   home: http://docutils.sourceforge.net/
-  license: Public Domain Dedictation and BSD 2-Clause and PSF 2.1.1 and GPL 3.0
+  license: LicenseRef-Public-Domain-Dedictation and BSD 2-Clause and PSF 2.1.1 and GPL 3.0
   license_file: COPYING.txt
   summary: 'Docutils -- Python Documentation Utilities'
   description: |
