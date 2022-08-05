@@ -13,13 +13,14 @@ source:
 
 
 build:
-  number: 4
+  number: 5
   script:
     - "{{ PYTHON }} -m pip uninstall -y setuptools"
     - "cd setuptools-src"
     - "{{ PYTHON }} -m pip install ."
     - "cd .."
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
+    - "{{ PYTHON }} -m pip uninstall -y setuptools"
 
 requirements:
   build:
