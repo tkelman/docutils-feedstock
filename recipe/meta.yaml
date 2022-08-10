@@ -7,25 +7,17 @@ package:
 source:
   - url: https://pypi.io/packages/source/d/docutils/docutils-{{ version }}.tar.gz
     sha256: a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99
-  - url: https://pypi.io/packages/source/s/setuptools/setuptools-57.4.0.tar.gz
-    sha256: 6bac238ffdf24e8806c61440e755192470352850f3419a52f26ffe0a1a64f465
-    folder: setuptools-src
-
 
 build:
   number: 5
   script:
-    - "{{ PYTHON }} -m pip uninstall -y setuptools"
-    - "cd setuptools-src"
-    - "{{ PYTHON }} -m pip install ."
-    - "cd .."
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
-    - "{{ PYTHON }} -m pip uninstall -y setuptools"
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - setuptools =57.4
   host:
     - python
     - pip
