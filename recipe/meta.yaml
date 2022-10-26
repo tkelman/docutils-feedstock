@@ -11,7 +11,7 @@ source:
   sha256: 33995a6753c30b7f577febfc2c50411fec6aac7f7ffeb7c4cfe5991072dcf9e6
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   # cannot be noarch b/c of scripts
   script: {{ PYTHON }} -m pip install . -vv
