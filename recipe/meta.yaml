@@ -1,5 +1,5 @@
 {% set name = "docutils" %}
-{% set version = "0.19" %}
+{% set version = "0.20" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/docutils-{{ version }}.tar.gz
-  sha256: 33995a6753c30b7f577febfc2c50411fec6aac7f7ffeb7c4cfe5991072dcf9e6
+  sha256: f75a5a52fbcacd81b47e42888ad2b380748aaccfb3f13af0fe69deb759f01eb6
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36]
   # cannot be noarch b/c of scripts
   script: {{ PYTHON }} -m pip install . -vv
