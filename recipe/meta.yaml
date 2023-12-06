@@ -11,7 +11,7 @@ source:
   sha256: f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b
 
 build:
-  number: 2
+  number: 3
   # cannot be noarch b/c of scripts
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -54,7 +54,7 @@ about:
   home: http://docutils.sourceforge.net/
   # docutils itself contains GPL-3.0-or-later licensed code as stated in COPYING.txt
   # but the relevant file tools/editors/emacs/rst.el is not shipped as part of the package.
-  license: LicenseRef-Public-Domain-Dedictation AND BSD-3-Clause AND BSD-2-Clause AND LicenseRef-PSF-2.1.1
+  license: CC-PDDC AND BSD-3-Clause AND BSD-2-Clause AND ZPL-2.1
   license_file: COPYING.txt
   summary: Docutils -- Python Documentation Utilities
   description: |
