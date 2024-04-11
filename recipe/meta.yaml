@@ -1,7 +1,6 @@
 {% set name = "docutils" %}
 {% set version = "0.21.1" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,42 +10,46 @@ source:
   sha256: 65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f
 
 build:
+  entry_points:
+    - docutils = docutils.__main__:main
+    - rst2html = docutils.core:rst2html
+    - rst2html4 = docutils.core:rst2html4
+    - rst2html5 = docutils.core:rst2html5
+    - rst2latex = docutils.core:rst2latex
+    - rst2man = docutils.core:rst2man
+    - rst2odt = docutils.core:rst2odt
+    - rst2pseudoxml = docutils.core:rst2pseudoxml
+    - rst2s5 = docutils.core:rst2s5
+    - rst2xetex = docutils.core:rst2xetex
+    - rst2xml = docutils.core:rst2xml
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  # cannot be noarch b/c of scripts
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.9
+    - flit-core >=3.4,<4
     - pip
   run:
-    - python
+    - python >=3.9
 
 test:
   imports:
     - docutils
-    - docutils.languages
-    - docutils.parsers
-    - docutils.parsers.rst
-    - docutils.parsers.rst.directives
-    - docutils.parsers.rst.languages
-    - docutils.readers
-    - docutils.transforms
-    - docutils.utils
-    - docutils.utils.math
-    - docutils.writers
-    - docutils.writers.html4css1
-    - docutils.writers.html5_polyglot
-    - docutils.writers.latex2e
-    - docutils.writers.odf_odt
-    - docutils.writers.pep_html
-    - docutils.writers.s5_html
-    - docutils.writers.xetex
   commands:
     - pip check
+    - docutils --help
+    - rst2html --help
+    - rst2html4 --help
+    - rst2html5 --help
+    - rst2latex --help
+    - rst2man --help
+    - rst2odt --help
+    - rst2pseudoxml --help
+    - rst2s5 --help
+    - rst2xetex --help
+    - rst2xml --help
   requires:
     - pip
 
